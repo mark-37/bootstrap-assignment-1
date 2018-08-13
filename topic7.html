@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script>
+  window.onload = function(){
+    var elem = document.getElementById('textBox1');
+    var textDiv = document.getElementById('encText');
+
+    elem.addEventListener('keyup', function(){
+      val = elem.value;
+
+
+      if(val === ''){
+        textDiv.innerHTML = '<h5>Empty...</h5>';
+      } else {
+        
+        textDiv.innerHTML = '<h5>Encrypted Text: </h5>'+encrypt(val);
+      }
+
+    });
+
+    function encrypt(val){
+      
+      colon = '%3A'
+
+      val = val.replace(/:/g,"%3A");
+      val = val.replace(/\//g, "%2F");
+      
+      return val;
+    }
+  }
+  </script>
+
+</head>
+<body>
+  
+  <div class="container">
+    <h3>Url Encoder</h3>
+    <p>Just Directly start typing</p>
+    <label for="enc">Url:</label>
+    <input 
+    type="text" name="enc" id="textBox1"
+    placeholder="Enter a Url"
+    >
+    <br>
+    
+    <div id="encText">
+      <h5>Empty...</h5>
+    </div>
+  
+  </div>
+
+</body>
+</html>

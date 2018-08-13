@@ -1,3 +1,40 @@
-.jumbotron {
-  padding: 1%;
+.container {
+  padding: 3%;
+  
 }
+
+.div-table{
+  background-color: #212529;
+  color: white;
+  width: 75%;
+  
+}
+
+.table-header{
+  font-weight: bold;
+}
+
+.cell {
+  display: inline-block;
+  margin: 2% 0 2% 1%;
+}
+
+.cell{
+  
+  width: 20%;
+}
+
+.rows {
+  
+  border-top: 0.1px solid #494949;
+}
+
+.first-cell{
+  width: 12%;
+  font-weight: bold;
+}
+
+#firstElement:hover{
+  text-shadow:  0 0 1px #ffffff;
+}
+
